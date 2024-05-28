@@ -1,17 +1,13 @@
 'use strict';
+let color = 'Red';
+console.log(color);
+//letは変数を宣言する
+//colorという変数を定義している
+//変数colorにRedを代入している
+//JSのプログラミングで使用する単語(予約語)は使用できない
 
-// console.log('Hello! I'm Yuta Nakamura);
-//I'mのシングルクォートが文字ではなく、プログラムとしてみなされてエラーが出る
-
-console.log('Hello! I\'m Yuta Nakamura');
-//上記のようなシングルクォートを文字列として扱うためには、シングルクォートの前にバックスラッシュ(\)を挿入する
-//この処理のことを「エスケープ」と呼ぶ。「\'」のようなプログラムで扱う記号を「エスケープシーケンス」と呼ぶ
-
-//その他のエスケープシーケンス
-console.log('\¥ \t AAA \n BBB');
-
-//ダブルクォートだとシングルクォートでもエラーが出ない。逆も然り
-console.log("Hello! I'm Yuta Nakamura");
-console.log('こんにちは！"中村悠太"さん');
-
-//ダブルクォートでもシングルクォートでもどちらを使ってもいいが、複数人で制作するときは統一した方がいい
+color = 'Green';
+console.log(color);
+//変数は中身を書き換えることができる
+//再宣言はできない
+//let color = 'Blue';
