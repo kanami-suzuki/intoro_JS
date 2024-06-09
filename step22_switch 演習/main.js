@@ -9,7 +9,12 @@
 //5 → 凶
 //それ以外 → 想定外の数値です
 
-let num = 1;
+let num = Math.floor(Math.random() * 5 + 1);
+//Math.random()関数は0以上1未満のランダムな値を返す
+//Math.random() * (max - min + 1) + min
+//が所謂公式の式のようなもので、上記の式に当てはめて計算する
+//maxが5、minが1
+//Math.floor()関数は与えられた数値以下の最大の整数を返す
 switch (num) {
   case 1:
     console.log('大吉');
