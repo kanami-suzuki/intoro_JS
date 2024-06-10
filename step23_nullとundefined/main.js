@@ -1,16 +1,11 @@
 'use strict';
-//undefined 未定義。変数を宣言したが、値は代入していない状態
-let x;
-console.log(x);
+//三項演算子
+//構文：条件式 ? trueの場合 : falseの場合
 
-//null 変数は定義されているが、該当する値が無い状態
-let item = null;
-console.log(item);
-
-if (x === undefined) {
-  console.log('undefinedです');
-}
-
-if (item === null) {
-  console.log('nullです');
-}
+//例題
+//年齢が20歳以上の場合は、ビールと出力
+//年齢が20未満の場合は、コーラと出力
+let age = 10;
+// age >= 20 ? console.log('ビール') : console.log('コーラ');
+let beverage = (age >= 20) ? 'ビール' : 'コーラ';
+console.log(beverage);
