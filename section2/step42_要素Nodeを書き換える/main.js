@@ -1,19 +1,15 @@
 'use strict';
-//ボタンをクリックしたらテキストを変更する
+//ボタンをクリックしたら処理を実行する
 let btn = document.getElementById('triggerButton');
-btn.addEventListener('click', function (e) {
-  //idによるノードの取得
-  let inputColorName = document.getElementById('inputColorName');
+btn.addEventListener('click', function (e) { //イベント処理
+  // idによるノードの取得
+  let headerTitle = document.getElementById('headerTitle');
+  console.log(headerTitle);
 
-  //取得したinput要素の入力値を取得
-  let colorNameText = inputColorName.value;
-
-  //取得したinput要素のname属性値を取得
-  //getAttribute()メソッドを使用し、取得したい属性値を引数に入力する
-  let inputName = inputColorName.getAttribute('name');
-
-  //showText(p要素)のidを取得
-  let showText = document.getElementById('showText');
-
-  showText.textContent = `name属性: ${inputName}, 入力されたテキスト： ${colorNameText}`;
+  //コンテンツ(テキスト)を取得
+  console.log(headerTitle.textContent);
 }, false)
+//getElementById()メソッド(関数)
+//引数に指定した文字列がHTML上にidとして一致した場合に要素を取得できる
+//Elementは日本語で要素。直訳すると「idの要素を取得する」のような感じになる
+//一致する要素がないときはnullが返ってくる
