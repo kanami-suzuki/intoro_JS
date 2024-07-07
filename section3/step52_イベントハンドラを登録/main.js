@@ -1,24 +1,31 @@
 'use strict';
+let sayHelloButton = document.getElementById('sayHelloButton');
 
-//コンソール出力
-window.console.log('Hello');
+//addEventListener()オブジェクト
+//構文：addEventListener(イベントの種類, 実行したい処理, false)
+//イベントの種類：clickとか
+//実行したい処理(function{})の中身console.log()とか
+//false：イベントの伝搬型式というもの。使用頻度は低いので、とりあえずfalseを書くものという認識で良い
 
-//アラート(警告)
-// window.alert('Hello');
-
-//確認ダイアログ
-// window.confirm('Hello');
-
-//別のwindowを開く
-// window.open('https://www.google.co.jp');
-
-//windowを閉じる
-// window.close();
-
-//スクロール
-//ボタンを押したら下にスクロール
-let btn = document.getElementById('triggerButton');
-btn.addEventListener('click', function (e) {
-  //第一引数は横方向のスクロール、第二引数は縦方向のスクロール
-  window.scroll(0, 200);
+//通常
+sayHelloButton.addEventListener('click', function (e) {
+  console.log('Hello');
+  console.log(e) //イベントのオブジェクトに関する情報が格納されている。eはなくてもOK
 })
+
+//eなし
+sayHelloButton.addEventListener('click', function () {
+  console.log('Hello');
+})
+
+//アロー関数
+sayHelloButton.addEventListener('click', () => {
+  console.log('Hello');
+})
+
+//処理を外で記述
+function sayHelloButtonHandler(e) {
+  console.log('Hello!');
+  console.log(e);
+}
+sayHelloButton.addEventListener('click', sayHelloButtonHandler, false);
