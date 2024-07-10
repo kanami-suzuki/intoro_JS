@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 
+    DOMContentLoadedイベントとloadイベント
+    Webページ表示の処理の流れの概要
+    1.HTML読み込み
+    2.DOMツリー構築完了で、DOMContentLoadedイベント発生
+    3.画像やスタイルシートなど全てのリソースの読み込み
+    4.完了後loadイベント発生
+  -->
+  <p id="nowLoading">Now Loading...</p>
+  <img src="https://source.unsplash.com/C0zDWAPFT9A" alt="猫">
+
+  <script src="main.js"></script>
+</body>
+
+</html>
