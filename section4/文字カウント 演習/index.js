@@ -5,9 +5,10 @@ function count(num) {
   textCounter.textContent = `残り${num}文字`;
   if (num < 0) {
     textCounter.style.color = 'red';
+  } else {
+    textCounter.style.color = '#000';
   }
 }
-count(10);
 
 let inputText = document.getElementById('inputText');
 inputText.addEventListener('keyup', () => {
