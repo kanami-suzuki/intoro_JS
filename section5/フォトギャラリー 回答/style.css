@@ -1,0 +1,40 @@
+body {
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+main {
+  padding-top: 30px;
+}
+
+#main_image img {
+  width: 90%;
+  margin: auto;
+  border: 5px solid #fff;
+}
+
+#thumbnails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  list-style-type: none;
+  width: 70%;
+  margin: 20px auto 0;
+  padding: 0;
+}
+
+#thumbnails img {
+  width: calc(100% / 5);
+  border: 1px solid #fff;
+  cursor: pointer;
+}
